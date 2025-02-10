@@ -41,7 +41,7 @@ header h1 {
 }
 header h2 {
   /*  margin: -25px; */
-    background-color: #a9856446;
+    background-color:#a9856446;
     border-radius:   1px 90px;
     margin:-25px 0px -18px  ;
     
@@ -199,13 +199,19 @@ main.flex {
     color: black;    
     margin: 5px;
  }
+ header#c{
+    background: none;
+    
+    color: #534334;
+ }
  .seccao-form {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 5%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-image: url('../imagens/VB.jpg');
     background-size: cover;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -254,7 +260,7 @@ button:hover {
 /* Estilos para os vídeos */
 .seccao-videos {
     background-color: white;
-    padding: 30px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
