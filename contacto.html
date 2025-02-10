@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Venâncio Bande</title>
+    <link rel="shortcut icon" href="VB.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css"> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
+</head>
+
+<body id="sobre">
+
+    <header>
+        <h1>Entre em Contacto</h1>
+        <nav>
+            
+            <a href="index.html">Início</a>
+            <a href="especialidade.html">Especialidade</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="projectos.html">Projectos</a>
+            <a href="contacto.html">Contacto</a>
+        
+    </nav>
+        <!--<p>Sou um engenheiro informático em formação e estou aberto a novos desafios e colaborações. Vamos conversar!</p>-->
+    </header>
+
+    <main id="sobre" class="flex">
+        
+            <!-- Coluna Esquerda (Formulário de Contato) -->
+            
+                <div class="seccao-form">
+                    <header id="c">
+                        <h2>Formulário de Contacto</h2>
+                    </header>
+                    <form action="processar_contacto.php" method="POST">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Seu email">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="oportunidade">Oportunidade de Trabalho</option>
+                            <option value="colaboracao">Colaboração em Projecto</option>
+                            <option value="duvida">Dúvida Técnica</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva seu assunto ou dúvida..."></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+         
+            <!-- Coluna Direita (Vídeos de Projetos) -->
+            
+                <div class="seccao-videos">
+                    <header>
+                        <h2>Meus Projectos</h2>
+                    </header>
+                    <p>Aqui estão alguns vídeos dos projectos em que tenho trabalhado. Clique nos vídeos abaixo para saber mais.</p>
+                    <div>
+                        <!-- Video 1 -->
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <!-- Video 2 -->
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                   
+                </div>
+           
+      
+        <!-- Mapa com localização -->
+        <div id="mapa" class="mapa"></div>
+        
+    </main>
+
+    <footer>
+            <p>&copy; 2025 <a href="cv.html" title="Acesse o CV">Eng. Venâncio Bande </a>- Todos os direitos reservados.</p>
+        
+    </footer>
+
+    <script>
+        // Função para inicializar o mapa com sua localização
+        function initMap() {
+            var localizacao = {lat: -25.9680, lng: 32.5770}; // Coordenadas aproximadas de Maputo, Moçambique
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: localizacao
+            });
+            var marker = new google.maps.Marker({
+                position: localizacao,
+                map: map
+            });
+        }
+    </script>
+
+</body>
+</html>
